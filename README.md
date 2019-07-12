@@ -32,4 +32,8 @@
 <br>基于OpenCV轮廓识别在图像中框选出主要的物体，基于VGG16模型训练神经网络，将框选得到的图片进行预测，并将结果返回前端显示。</br>
 目前模型训练集准确度83.8%，测试集准确度67.5%，仍有待提高。。
 
+![ZWz9Z8.png](https://s2.ax1x.com/2019/07/12/ZWz9Z8.png)
+
+[![ZWzPIg.png](https://s2.ax1x.com/2019/07/12/ZWzPIg.png)](https://imgchr.com/i/ZWzPIg)
+
 ### 完结撒花！~
