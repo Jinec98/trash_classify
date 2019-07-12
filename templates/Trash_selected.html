@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>垃圾分类识别系统</title>
+    <style>
+        .ui_button {
+            display: inline-block;
+            border-radius: 10px;
+            line-height: 44px;
+            padding: 0 20px;
+            color: #FFFFFF;
+            font-family: "微软雅黑";
+            cursor: pointer;
+            position: relative;
+        }
+
+        .ui_button_primary1 {
+            background-color: #EE914C;
+        }
+
+        .ui_button_primary2 {
+            background-color: #4472C4;
+        }
+
+        label.ui_button:hover {
+            background-color: #d46216;
+        }
+
+        img {
+            height: 65px;
+            width: 65px;
+            margin-outside: 10px;
+        }
+
+        .test1 {
+            box-sizing: content-box;
+            height: 100%;
+            padding: 150px;
+        }
+
+        .md-title {
+            color: rgb(60, 64, 67);
+            font-size: 14px;
+            font-weight: 500;
+            text-align: center;
+            white-space: nowrap;
+        }
+
+        .table {
+            display: inline-block;
+            margin: 60px;
+        }
+
+        .inner {
+            display: inline-block;
+            width: 140px;
+        }
+
+        .footer {
+            text-align: center;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 2px;
+            position: absolute;
+            background-color: #187C21;
+            opacity: 0.9;
+        }
+
+        a:link {
+            color: burlywood;
+        }
+
+        a:visited {
+            color: #FFFFFF;
+        }
+
+    </style>
+</head>
+
+<body>
+<div id="main" class="test1" style="text-align: center">
+    <div id="header" style="text-align:center">
+        <h1 style="font-family: Arial; font-size: 48px">垃圾分类</h1>
+    </div>
+
+    <br>
+    <div id="file_upload" style="text-align:center">
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            <input type="text" name="textfield" value="" id="textfield"
+                   style="width: 520px;height: 44px; border: 0px; background-color: rgb(241, 243, 244); border-radius: 10px">
+            <label class="ui_button ui_button_primary1" for="xFile">上传</label>
+            <label class="ui_button ui_button_primary2" for="insure">确认</label>
+            <input name="fileField" type="file" id="xFile" style="position:absolute;clip:rect(0 0 0 0)"
+                   onchange="document.getElementById('textfield').value=this.value"/>
+            <input type="submit" id="insure" style="position:absolute;clip:rect(0 0 0 0);"/>
+        </form>
+
+    </div>
+
+    <div class="table" style="text-align: center;">
+        <div class="inner">
+            <a href="https://baike.baidu.com/item/%E5%B9%B2%E5%9E%83%E5%9C%BE/23589706?fr=aladdin">
+                <img class="img" src="../static/icon/Residual.png">
+            </a>
+            <div class="md-title" style="direction: ltr;"><span>干垃圾科普</span></div>
+        </div>
+        <div class="inner">
+            <a href="https://baike.baidu.com/item/%E6%B9%BF%E5%9E%83%E5%9C%BE">
+                <img class="img" src="../static/icon/Household.png">
+            </a>
+            <div class="md-title" style="direction: ltr;"><span>湿垃圾科普</span></div>
+        </div>
+        <div class="inner">
+            <a href="https://baike.baidu.com/item/%E6%9C%89%E5%AE%B3%E5%9E%83%E5%9C%BE/5677220?fr=aladdin">
+                <img class="img" src="../static/icon/Harmful.png">
+            </a>
+            <div class="md-title" style="direction: ltr;"><span>有害垃圾科普</span></div>
+        </div>
+        <div class="inner">
+            <a href="https://baike.baidu.com/item/%E5%8F%AF%E5%9B%9E%E6%94%B6%E7%89%A9/2479461?fromtitle=%E5%8F%AF%E5%9B%9E%E6%94%B6%E5%9E%83%E5%9C%BE&fromid=2084517&fr=aladdin">
+                <img class="img" src="../static/icon/Recyclable.png">
+            </a>
+            <div class="md-title" style="direction: ltr;"><span>可回收垃圾科普</span></div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p style="color: rgb(236,236,236); font-size: 16px">
+            样本图片数量: 32313张&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
+            训练集图片数量: 29081张&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
+            训练集准确度: 83.8%&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
+            测试集图片数量: 3232张&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
+            测试集准确度: 67.5%&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
+            可识别垃圾种类: <a href="/href">50种</a>
+        </p>
+    </div>
+
+
+</div>
+
+</body>
+</html>
